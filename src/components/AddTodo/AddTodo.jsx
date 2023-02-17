@@ -12,6 +12,7 @@ export default function AddTodo({ handleAdd }) {
     //trim을 하고 난 이후로 유지가된다. 따라서 그 이후에 trim 메소드를 재호출 필요없다.
     if (text.trim() === "") return;
     handleAdd({ id: uuidv4(), text, status: "active" });
+    // localStorage.todos= prev그 전에 기록
     setText("");
   };
   return (

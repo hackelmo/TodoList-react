@@ -15,12 +15,12 @@ export default function Todo({ todo, onUpdate, onDelete }) {
     <li className={styles.todo}>
       <input
         type="checkbox"
-        id="checkbox"
+        id={todo.id}
         checked={status === "completed"}
         onChange={handleChange}
         className={styles.checkbox}
       />
-      <label htmlFor="checkbox" className={styles.text}>
+      <label htmlFor={todo.id} className={styles.text}>
         {text}
       </label>
       <span className={styles.icon}>
